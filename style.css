@@ -18,6 +18,7 @@ header.start-up {
 	background-position: center;
 	height: 100%;
 	background-size: cover;
+	justify-content: center;
 }
 
 header.start-up h1{
@@ -45,6 +46,7 @@ header.start-up hr {
 
 .btn-xl {
 	padding: 1rem 2rem; 
+	align-content: center;
 }
 
 .btn-warning {
