@@ -1,0 +1,65 @@
+
+body,html {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	font-family: "Montserrat";
+}
+
+hr {
+	max-width: 65px;
+	border-width: 3px;
+	border-color: white;
+}
+header.start-up {
+	background-image: url(images/horse-herd-fog-nature-52500.jpeg);
+	background-position: center;
+	height: 100%;
+	background-size: cover;
+}
+
+header.start-up h1{
+
+	text-align: center;
+	display: flex;	
+	justify-content: center;
+	padding: 200px 0 0 0;
+	color: white;
+
+}
+
+header.start-up hr {
+	margin-top: 200px;
+	margin-bottom: 30px;
+
+}
+
+.btn {
+	font-weight: 700;
+	text-transform: uppercase;
+	border-radius: 300px;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.btn-xl {
+	padding: 1rem 2rem; 
+}
+
+.btn-warning {
+  background-color: yellow;
+  border-color: yellow; }
+
+.btn-warning:hover {
+  background-color: white;
+  border-color: grey;
+  border-width: 5px;
+  font-size: 20px;
+  cursor: pointer;
+  
+}
+
+.faded {
+	 color: rgba(255, 255, 255, 0.8); 
+}
