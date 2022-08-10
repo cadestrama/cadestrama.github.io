@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gary S. Mosqueda - Resume</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+</head>
+<body class="font-sans text-black" 
+    style="background-image: url('img/bg-tablet-pattern.svg'); 
+            background-repeat: no-repeat;
+            
+    
+            ">
+
+    <nav x-data="{data: 'profile',dropDown: false}">
+        <div class="container mx-auto p-4 my-11 text-sm">
+
+
+            <!-- nav mobile -->
+            <div class="relative flex items-center justify-center space-x-5 lg:hidden">
+                <button class="hover:text-indigo-800"
+                :class="{'px-3 py-1  rounded-lg bg-indigo-800 text-white hover:text-white':data ==='profile'}"
+                 x-on:click="data = 'profile'"
+                >
+                    <i class="bi bi-house-fill text-2xl"></i><span class="mx-2">Profile</span>
+                    
+                </button>
+
+                <button x-on:click="dropDown=!dropDown" class="hover:text-indigo-800 font-bold">
+                    <span>
+                        <i class="bi bi-box-arrow-down"> </i>
+                        More Information
+                    </span>
+                </button>
+
+
+                
+
+               
+            </div>
+
+
+            <div x-show="dropDown" class="lg:hidden z-50 bg-white top-10   p-5 w-auto mx-auto flex items-center justify-center rounded-lg shadow-lg">
+                        
+                <button class=" hover:text-indigo-800"
+                :class="{'px-3 py-1  rounded-lg bg-indigo-800 text-white hover:text-white':data ==='skills'}"
+                x-on:click="data = 'skills'"
+                >
+                    <i class="bi bi-book-fill text-2xl"></i><span class="mx-2">Skills</span>
+                </button>
+
+                <button class=" hover:text-indigo-800"
+            :class="{'px-3 py-1  rounded-lg bg-indigo-800 text-white hover:text-white':data ==='experienced'}"
+            x-on:click="data = 'experienced'"
+            >
+                <i class="bi bi-browser-safari text-2xl"></i><span class="mx-2">Work History</span>
+            </button>
+
+
+            <button class=" hover:text-indigo-800"
+            
+            :class="{'px-3 py-1  rounded-lg bg-indigo-800 text-white hover:text-white':data ==='education'}"
+            x-on:click="data = 'education'"
+            >
+                <i class="bi bi-bank2 text-2xl"></i><span class="mx-2">Education</span>
+            </button>
+
+            <button class=" hover:text-indigo-800"
+            :class="{'px-3 py-1  rounded-lg bg-indigo-800 text-white hover:text-white':data ==='certification'}"
+            x-on:click="data = 'certification'"
+            >
+                <i class="bi bi-patch-check-fill text-2xl"></i><span class="mx-2">Certification</span>
+            </button>
+
+            <button class=" hover:text-indigo-800">
+                <i class="bi bi-terminal-fill text-2xl"></i><span class="mx-2">Projects</span>
+            </button>
+                       
+            </div>
+
+            <!-- end mobile dropdown -->
+            
+
+            <!-- nav desktop -->
+            <div class="hidden lg:flex items-center justify-center space-x-5 ">
+                <button class="hover:text-indigo-800"
+                :class="{'px-3 py-1  rounded-lg bg-indigo-800 text-white hover:text-white':data ==='profile'}"
+                 x-on:click="data = 'profile'"
+                >
+                    <i class="bi bi-house-fill text-2xl"></i><span class="mx-2">Profile</span>
+                </button>
+
+                <button class=" hover:text-indigo-800"
+                :class="{'px-3 py-1  rounded-lg bg-indigo-800 text-white hover:text-white':data ==='skills'}"
+                x-on:click="data = 'skills'"
+                >
+                    <i class="bi bi-book-fill text-2xl"></i><span class="mx-2">Skills</span>
+                </button>
+
+                <button class=" hover:text-indigo-800"
+                :class="{'px-3 py-1  rounded-lg bg-indigo-800 text-white hover:text-white':data ==='experienced'}"
+                x-on:click="data = 'experienced'"
+                >
+                    <i class="bi bi-browser-safari text-2xl"></i><span class="mx-2">Work History</span>
+                </button>
+
+
+                <button class=" hover:text-indigo-800"
+                
+                :class="{'px-3 py-1  rounded-lg bg-indigo-800 text-white hover:text-white':data ==='education'}"
+                x-on:click="data = 'education'"
+                >
+                    <i class="bi bi-bank2 text-2xl"></i><span class="mx-2">Education</span>
+                </button>
+
+                <button class=" hover:text-indigo-800"
+                :class="{'px-3 py-1  rounded-lg bg-indigo-800 text-white hover:text-white':data ==='certification'}"
+                x-on:click="data = 'certification'"
+                >
+                    <i class="bi bi-patch-check-fill text-2xl"></i><span class="mx-2">Certification</span>
+                </button>
+
+                <button class=" hover:text-indigo-800">
+                    <i class="bi bi-terminal-fill text-2xl"></i><span class="mx-2">Projects</span>
+                </button>
+            </div>
+
+
+            <!-- profile -->
+
+            <div x-show="data === 'profile'" class="flex items-center justify-start">
+
+                <div class="w-full shadow-lg p-5 rounded-lg border border-indigo-800">
+
+                    <div class="flex flex-col items-center justify-center space-y-2">
+
+                        <img src="img/profile.jpg" class="rounded-full border-4 border-indigo-800 w-32 h-32"  alt="">
+
+                        <p class="text-2xl font-bold">GARY S. MOSQUEDA</p>
+                        <P class="text-xl font-bold">IT Professional</P>
+
+                        <p class="text-center text-sm"> I am an I.T Professional, hardworking and passionate in every task. Goal oriented, have a positive attitude, organized and very eager to learn new technologies. Adapt quickly to changing environments and can effectively multi-task.</p>
+
+                        <div class=" text-center text-sm">
+                        <p class="text-2xl pt-11">Personal Information</p>
+                        <p class="pt-5">Address: Brgy. Tipolo, Mandaue City, Cebu</p>
+                        <p>Age: 31</p>
+                        <p>Phone: 09669356737</p>
+                        <p>Email: garymsqd3@gmail.com</p>
+                        </div>
+                        
+
+                    </div>
+                    
+            </div>
+
+            </div>
+
+            <!-- Skills -->
+
+            <div x-show="data === 'skills'" class="flex items-center justify-start">
+
+                <div class="w-full shadow-lg p-5 rounded-lg border border-indigo-800 flex flex-col items-center justify-center pt-10">
+
+                    <p class="text-2xl font-bold text-center">Web Programming Full Stack Development</p>
+
+                    <p>My resume was built by these programming languages and frameworks.</p>
+
+                    <div class="grid grid-cols-3 gap-8 pt-10">
+
+                        <div class="shadow-lg p-5 rounded-lg flex items-center">
+                            <img src="brands/tailwind-css-1-2.svg" class="w-32 "alt="">  
+                        </div>
+
+                        <div class="shadow-lg p-5 rounded-lg">
+                            <img src="brands/Bootstrap_logo.svg.png" class="w-32 "alt="">  
+                        </div>
+
+                        <div class="shadow-lg p-5 rounded-lg flex items-center justify-center">
+                            <img src="brands/laravel-featured.png" class="w-32 "alt="">  
+                        </div>
+
+                        <div class="shadow-lg p-5 rounded-lg flex items-center justify-center">
+                            <img src="brands/alpine_long.svg" class="w-32 "alt="">  
+                        </div>
+
+                        <div class="shadow-lg p-5 rounded-lg flex items-center justify-center">
+                            <img src="brands/laravel-livewire.png" class="w-32 "alt="">  
+                        </div>
+
+                        <div class="shadow-lg p-5 rounded-lg flex items-center justify-center">
+                            <img src="brands/PHP-logo.svg.png" class="w-32 "alt="">  
+                        </div>
+                        
+                        
+                    </div>
+
+                    <p class="text-2xl font-bold pt-20 text-center" >Technical skills in Troubleshooting, Networking and Server Management</p>
+
+                    <div class="grid grid-cols-3 gap-8 pt-10">
+
+                        <div class="shadow-lg p-5 rounded-lg flex items-center">
+                            <img src="brands/1280px-MikroTik_logo.svg.png" class="w-32 "alt="">  
+                        </div>
+
+                        <div class="shadow-lg p-5 rounded-lg">
+                            <img src="brands/tesda.png" class="w-32 "alt="">  
+                        </div>
+
+                        <div class="shadow-lg p-5 rounded-lg flex items-center justify-center">
+                            <img src="brands/windows-server-2012.jpg" class="w-32 "alt="">  
+                        </div>
+
+                        
+                        
+                        
+                    </div>
+                    
+            </div>
+
+            </div>
+
+
+
+            <!-- Expericiend -->
+
+            <div x-show="data === 'experienced'" class="flex items-center justify-start">
+
+                <div class="w-full shadow-lg p-5 rounded-lg border border-indigo-800">
+
+                    <div class="flex flex-col items-center justify-center space-y-2">
+
+                     
+
+                        <p class="text-2xl font-bold">Work History</p>
+
+                        <div class="flex flex-col items-start space-y-4">
+                            <div class="flex items-center justify-start space-x-2">
+                                <i class="bi bi-clock-history text-indigo-800 text-3xl font-bold"></i> 
+                                <p>
+                                   <span class="font-bold">Technical Support Representative (part-time)</span>  - Sykes, Cebu City 
+                                    (Dec. 2019 – Jan, 2022)
+    
+                                </p>
+                            </div>
+
+                            <div class="flex items-center justify-start space-x-2">
+                                <i class="bi bi-clock-history text-indigo-800 text-3xl font-bold"></i> 
+                                <p>
+                                   <span class="font-bold">Technical Support & Web Developer </span>  - EQUI-PARCO CONSTRUCTION COMPANY, Butuan City  (April 2015 - June 2019)
+                                </p>
+                            </div>
+
+
+                            <div class="flex items-center justify-start space-x-2">
+                                <i class="bi bi-clock-history text-indigo-800 text-3xl font-bold"></i> 
+                                <p>
+                                   <span class="font-bold">Sales Technician  </span>  Silicon Valley Computer Group Phils. Inc., Butuan City  
+                                </p>
+                            </div>
+
+
+                            <div class="flex items-center justify-start space-x-2">
+                                <i class="bi bi-clock-history text-indigo-800 text-3xl font-bold"></i> 
+                                <p>
+                                   <span class="font-bold">Computer Teacher   </span>  – Saint Joseph Institute of Technology., Butuan City 
+                                   (June 2012 - March 2013)
+                                   
+                                </p>
+                            </div>
+                           
+                        </div>
+                        
+
+                        
+
+                    </div>
+                    
+            </div>
+
+            </div>
+
+            <!-- end of experinced -->
+
+             <!-- education -->
+
+             <div x-show="data === 'education'" class="flex items-center justify-start">
+
+                <div class="w-full shadow-lg p-5 rounded-lg border border-indigo-800">
+
+                    <div class="flex flex-col items-center justify-center space-y-2">
+
+                        <img src="img/profile.jpg" class="rounded-full border-4 border-indigo-800 w-32 h-32"  alt="">
+                        <p class="text-2xl font-bold">GARY S. MOSQUEDA</p>
+                        <P class="text-xl font-bold">IT Professional</P>
+
+
+                        <p class="text-3xl text-center">BACHELOR OF SCIENCE IN COMPUTER SCIENCE</p>
+                        <p>2012</p>
+                        <p>
+                            <i class="bi bi-building text-4xl"></i>
+                        </p>
+                        <p class="font-bold">Saint Joseph Institute of Technology, Butuan City</p>
+                        
+
+                    </div>
+                    
+            </div>
+
+            </div>
+
+
+
+             <!-- certification -->
+
+             <div x-show="data === 'certification'" class="flex items-center justify-start">
+
+                <div class="w-full shadow-lg p-5 rounded-lg border border-indigo-800">
+
+                    <div class="flex flex-col items-center justify-center space-y-2">
+
+                        <p class="text-2xl font-bold">Certification</p>
+
+                        <p>I have some certifications from technical side of things.</p>
+    
+                        <div class="grid grid-cols-2 gap-8 pt-10 text-center">
+    
+                            <div class="shadow-lg p-5 rounded-lg flex flex-col justify-center items-center">
+                                <img src="brands/1280px-MikroTik_logo.svg.png" class="w-32 "alt="">  
+                                <p>Mikrotik Certified Network Associate (MTCNA)</p>
+                            </div>
+    
+                            <div class="shadow-lg p-5 rounded-lg flex flex-col justify-center items-center">
+                                <img src="brands/tesda.png" class="w-32 "alt=""> 
+                                <p>Computer System Servicing NC II</p> 
+                            </div>
+    
+                           
+                            
+                            
+                        </div>
+                        
+
+                    </div>
+                    
+            </div>
+
+            </div>
+
+          
+            
+
+        </div>
+
+    </nav>
+
+
+    <footer>
+       <div class="container mx-auto flex flex-col items-center justify-center py-4">
+        
+       <P class="text-gray-900 text-sm font-bold">Copyright &copy; 2022 My Personal Portfolio </P>
+       <p class="text-sm">Gary S. Mosqueda</p>
+       </div>
+    </footer>
+
+
+    
+</body>
+</html>
