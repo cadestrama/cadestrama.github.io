@@ -16,7 +16,7 @@
     
             ">
 
-    <nav x-data="{data: 'profile',dropDown: false}">
+    <nav x-data="{data: 'codes',dropDown: false}">
         <div class="container mx-auto p-4 my-11 text-sm">
 
 
@@ -76,9 +76,12 @@
                 <i class="bi bi-patch-check-fill text-2xl"></i><span class="mx-2">Certification</span>
             </button>
 
-            <button class=" hover:text-indigo-800">
-                <i class="bi bi-terminal-fill text-2xl"></i><span class="mx-2">Projects</span>
-            </button>
+            <button class=" hover:text-indigo-800"
+                :class="{'px-3 py-1  rounded-lg bg-indigo-800 text-white hover:text-white':data ==='codes'}"
+                x-on:click="data = 'codes'"
+                >
+                    <i class="bi bi-terminal-fill text-2xl"></i><span class="mx-2">Sample Codes</span>
+                </button>
                        
             </div>
 
@@ -124,8 +127,11 @@
                     <i class="bi bi-patch-check-fill text-2xl"></i><span class="mx-2">Certification</span>
                 </button>
 
-                <button class=" hover:text-indigo-800">
-                    <i class="bi bi-terminal-fill text-2xl"></i><span class="mx-2">Projects</span>
+                <button class=" hover:text-indigo-800"
+                :class="{'px-3 py-1  rounded-lg bg-indigo-800 text-white hover:text-white':data ==='codes'}"
+                x-on:click="data = 'codes'"
+                >
+                    <i class="bi bi-terminal-fill text-2xl"></i><span class="mx-2">Sample Codes</span>
                 </button>
             </div>
 
@@ -355,7 +361,7 @@
 
             <!-- end of certification -->
 
-            <div x-show="data === 'education'" class="flex items-center justify-start">
+            <div x-show="data === 'codes'" class="flex items-center justify-start">
 
                 <div class="w-full shadow-lg p-5 rounded-lg border border-indigo-800">
 
